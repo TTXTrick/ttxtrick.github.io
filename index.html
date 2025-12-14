@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONU OS</title>
+<link rel="icon" type="image/png" href="https://d4.alternativeto.net/y3MDj8JYQfvdZQnKjaDyl7W60SFuKRNTA6gibhYft68/rs:fit:280:280:0/g:ce:0:0/exar:1/YWJzOi8vZGlzdC9pY29ucy9vbnVfMjYyOTQyLnBuZw.png">
+
+<style>
+/* === Base layout === */
+body {
+    background-color: #FFFBEF;
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* === Header === */
+header {
+    background-color: #A42E2B;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0 1.5em 0;
+    border-bottom: 3px solid #600;
+}
+
+header img {
+    width: 120px;
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+header h1 {
+    margin: 0.5em 0 0;
+    font-size: 2.2em;
+}
+header p {
+    margin: 0.5em 0 0;
+}
+
+/* === Page container (sidebar + main) === */
+#container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === Sidebar === */
+aside {
+    width: 240px;
+    background-color: #EEE9D5;
+    border-right: 1px solid #ccc;
+    padding: 1.5em;
+    font-size: 0.95em;
+    position: relative;
+}
+
+aside h2 {
+    color: #600;
+    font-size: 1.2em;
+    margin-top: 0;
+    border-bottom: 1px solid #600;
+    padding-bottom: 0.25em;
+}
+
+aside a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #0645ad;
+    text-decoration: none;
+    margin: 0.4em 0;
+    border-radius: 6px;
+    padding: 0.2em 0.4em;
+    transition: background 0.2s, transform 0.2s;
+}
+aside a:hover {
+    background-color: #ddd;
+    transform: translateX(3px);
+}
+
+aside img.github-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+}
+
+aside p {
+    font-size: 0.9em;
+    margin-top: 1.5em;
+    color: #333;
+}
+
+/* === Main content === */
+main {
+    flex: 1;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    padding: 2em;
+}
+
+h2 {
+    color: #600;
+    border-bottom: 1px solid #600;
+    margin-top: 2em;
+}
+
+/* === Code & Buttons === */
+pre {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 0.75em;
+    overflow-x: auto;
+}
+code {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 0 0.2em;
+    font-size: 0.95em;
+}
+
+/* GNU-style button (flat beige link button) */
+button {
+    background-color: #EEE9D5;
+    border: 1px solid #999;
+    padding: 0.4em 1em;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95em;
+    color: #000;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 #fff;
+}
+button:hover {
+    background-color: #E0DAC3;
+    border-color: #666;
+}
+
+/* === Image styling === */
+main img {
+    display: block;
+    margin: 1.5em auto;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+/* === Footer === */
+footer {
+    background-color: #EEE9D5;
+    border-top: 2px solid #A42E2B;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 1em 0;
+}
+</style>
+</head>
+
+<body>
+<header>
+    <img src="https://d4.alternativeto.net/y3MDj8JYQfvdZQnKjaDyl7W60SFuKRNTA6gibhYft68/rs:fit:280:280:0/g:ce:0:0/exar:1/YWJzOi8vZGlzdC9pY29ucy9vbnVfMjYyOTQyLnBuZw.png" alt="ONU OS Logo">
+    <h1>ONU OS</h1>
+    <p>An open source operating system for software development originally based on Debian 12.</p>
+</header>
+
+<div id="container">
+    <aside>
+        <h2>Navigation</h2>
+        <a href="#features">Features</a>
+        <a href="#download-section">Download</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/TTXTrick/ONU" target="_blank">
+            <img class="github-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"> GitHub Repo
+        </a>
+
+        <p>
+            <strong>About:</strong><br>
+            ONU OS is a Linux distribution for development oiginally based on Debian 12
+        </p>
+    </aside>
+
+    <main>
+        <section id="features">
+            <h2>Features</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Tux Penguin">
+            <ul>
+                <li><strong>Simple:</strong> ONU is a very minimalist operating system.</li>
+                <li><strong>Good development environment:</strong> Designed for efficient software creation.</li>
+                <li><strong>Easy to use:</strong> A straightforward graphical interface makes it intuitive.</li>
+                <li><strong>Open-source customization:</strong> You can create your own version/flavor by editing the build script on GitHub and submitting it by e-mailing me your flavor's info and its GitHub URL.</li>
+            </ul>
+        </section>
+
+        <section id="download-section">
+            <h2>Download ONU OS</h2>
+            <p>To download and build ONU, click the button below. On a Debian-based environment, run the following commands:</p>
+            <pre>
+chmod +x build-onu-plus.sh
+./build-onu-plus.sh
+            </pre>
+            <p>This will produce the file <code>~/ONU/live-image-amd64.hybrid.iso</code>.  
+            You can test it live or install it via Calamares from the desktop.</p>
+
+            <p><button onclick="downloadOS()">Download</button></p>
+        </section>
+    </main>
+</div>
+
+<footer id="contact">
+    <p>2025 ONU OS.</p>
+    <p>Contact:<a href="mailto:ttxtrick@gmail.com">ttxtrick@gmail.com</a></p>
+</footer>
+
+<script>
+function downloadOS() {
+    const link = document.createElement('a');
+    link.href = 'https://drive.usercontent.google.com/download?id=1HgXMSpMFoU0BAn_TfQDoBYHSHrEpovoa&export=download&authuser=0';
+    link.download = 'build-onu-plus.sh';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+// Smooth scroll for sidebar links
+document.querySelectorAll('aside a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+</script>
+</body>
+</html>
